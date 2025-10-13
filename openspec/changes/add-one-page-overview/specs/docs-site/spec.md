@@ -11,3 +11,8 @@ The project MUST define a single-page overview structure for OpenSpec that docum
 - WHEN drafting copy for the page
 - THEN Traditional Chinese messaging is provided as the primary text
 - AND core English terms such as "Spec-driven development" and "Change Proposal" are preserved alongside the Chinese descriptions.
+
+#### Scenario: Page scaffold delivered
+- WHEN the site is generated
+- THEN a static page is available at `docs/index.html` with supporting assets in `docs/styles.css` and `docs/main.js`
+- AND the page implements the documented sections with responsive layout and accessible navigation.

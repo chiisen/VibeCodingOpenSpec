@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenSpec 一頁概覽</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="top-nav">
+        <a class="brand" href="#hero">OpenSpec 概覽</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="切換導覽選單">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <div class="nav-links" id="nav-links" data-open="false">
+          <a href="#hero">首頁</a>
+          <a href="#why">為什麼選擇</a>
+          <a href="#workflow">工作流程</a>
+          <a href="#getting-started">快速開始</a>
+          <a href="#cli">CLI 指南</a>
+          <a href="#example">變更範例</a>
+          <a href="#community">社群與更新</a>
+        </div>
+      </nav>
+      <section class="hero" id="hero">
+        <div class="hero__text">
+          <p class="eyebrow">Spec-driven development for AI coding assistants</p>
+          <h1>OpenSpec 一頁式說明</h1>
+          <p class="lead">
+            先對齊需求，再開始寫程式。OpenSpec 讓人類與 AI 協作者在同一份規格上共識，保留審閱軌跡、降低溝通成本。
+          </p>
+          <div class="cta-group">
+            <a class="btn primary" href="https://www.npmjs.com/package/@fission-ai/openspec" target="_blank" rel="noreferrer">
+              npm install -g @fission-ai/openspec
+            </a>
+            <a class="btn ghost" href="https://github.com/Fission-AI/OpenSpec" target="_blank" rel="noreferrer">
+              檢視 GitHub 專案
+            </a>
+          </div>
+          <p class="supporting-text">
+            免 API key，與 Codex、Cursor、Claude Code 等工具並行使用。使用 `openspec init` 為團隊建立共用規格流程。
+          </p>
+        </div>
+        <figure class="hero__image">
+          <img src="../images/OpenSpec.png" alt="OpenSpec Dashboard preview" loading="lazy" />
+          <figcaption>OpenSpec 將提案、任務、規格整合在同一個工作流程。</figcaption>
+        </figure>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="why">
+        <div class="container">
+          <h2>為什麼選擇 OpenSpec <span class="en-label">Why OpenSpec</span></h2>
+          <p class="section-lead">
+            當需求只存在對話與記憶中，很難確保 AI 助手與人類理解一致。OpenSpec 以輕量規格流程鎖定意圖，帶來可重複、可審閱的成果。
+          </p>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>對齊意圖</h3>
+              <p>使用變更資料夾（proposal / tasks / specs）先定義工作範圍，再請 AI 編碼，避免實作偏離原始需求。</p>
+            </article>
+            <article class="feature-card">
+              <h3>可稽核</h3>
+              <p>所有的規格修改都以 delta 紀錄，誰在何時改了什麼一目了然，適合團隊審查與長期維運。</p>
+            </article>
+            <article class="feature-card">
+              <h3>工具友善</h3>
+              <p>支援原生 slash commands（如 Cursor、Windsurf）與 AGENTS.md 指引，可套用在不同 AI coding assistants。</p>
+            </article>
+            <article class="feature-card">
+              <h3>Brownfield-first</h3>
+              <p>區隔「現況」與「提案」，讓維護既有系統或跨規格調整時仍能保持變更清楚易懂。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="workflow">
+        <div class="container">
+          <h2>工作流程 <span class="en-label">Workflow Overview</span></h2>
+          <p class="section-lead">
+            四個步驟讓人類與 AI 協作：規劃 → 對齊 → 實作 → 歸檔，每一步都留下明確的規格與任務紀錄。
+          </p>
+          <ol class="workflow-list">
+            <li>
+              <h3>1. Draft Change</h3>
+              <p>建立 `openspec/changes/<change-id>/`，撰寫 `proposal.md`、`tasks.md` 與 delta 規格描述預期行為。</p>
+            </li>
+            <li>
+              <h3>2. Review &amp; Align</h3>
+              <p>與 AI 助手或夥伴反覆調整文案與規格，直到所有人對需求與實作步驟都有共識。</p>
+            </li>
+            <li>
+              <h3>3. Implement Tasks</h3>
+              <p>依 `tasks.md` 的核取清單實作與測試，必要時在變更資料夾記錄設計決策。</p>
+            </li>
+            <li>
+              <h3>4. Archive &amp; Update Specs</h3>
+              <p>完成後執行 `openspec archive <change-id>`，將核准的 delta 合併回 `openspec/specs/` 作為最新真實來源。</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="getting-started">
+        <div class="container">
+          <h2>快速開始 <span class="en-label">Getting Started</span></h2>
+          <div class="columns">
+            <div>
+              <h3>環境需求</h3>
+              <ul>
+                <li>Node.js >= 20.19.0（`node --version`）</li>
+                <li>npm（或其他套件管理工具）</li>
+                <li>任一支援 AGENTS.md 或 slash commands 的 AI coding assistant</li>
+              </ul>
+            </div>
+            <div>
+              <h3>安裝流程</h3>
+              <ol>
+                <li>在專案根目錄執行：<code>npm install -g @fission-ai/openspec@latest</code></li>
+                <li>使用 <code>openspec init</code> 建立結構與 AGENTS 指南。</li>
+                <li>閱讀 `openspec/project.md` 並填寫專案背景與技術棧。</li>
+                <li>建立第一個變更提案，請 AI 依據規格進行實作。</li>
+              </ol>
+            </div>
+          </div>
+          <aside class="tip">
+            <strong>小提示：</strong>使用 `openspec update` 可更新共享指引，確保不同工具的 AI 助手遵循最新規範。
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="cli">
+        <div class="container">
+          <h2>CLI 快速參考 <span class="en-label">CLI Quick Reference</span></h2>
+          <div class="cli-grid">
+            <article class="cli-card">
+              <h3><code>openspec init</code></h3>
+              <p>初始化專案結構，生成 AGENTS 指南與預設資料夾。</p>
+            </article>
+            <article class="cli-card">
+              <h3><code>openspec list</code></h3>
+              <p>檢視目前所有變更與狀態，掌握提案與實作進度。</p>
+            </article>
+            <article class="cli-card">
+              <h3><code>openspec validate --strict</code></h3>
+              <p>驗證變更是否符合格式要求，包含 delta 標頭與 Scenario 區塊。</p>
+            </article>
+            <article class="cli-card">
+              <h3><code>openspec diff &lt;change-id&gt;</code></h3>
+              <p>比對變更資料夾內的規格差異，便於審閱與溝通。</p>
+            </article>
+            <article class="cli-card">
+              <h3><code>openspec apply &lt;change-id&gt;</code></h3>
+              <p>讓 AI 助手讀取提案並著手實作 TODO 項目。</p>
+            </article>
+            <article class="cli-card">
+              <h3><code>openspec archive &lt;change-id&gt;</code></h3>
+              <p>將完成的變更合併回 specs/，並移至 archive/ 作為審計紀錄。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="example">
+        <div class="container">
+          <h2>變更資料夾範例 <span class="en-label">Example Change Folder</span></h2>
+          <div class="example-layout">
+            <pre class="code-block"><code>openspec/
+├─ specs/
+│  └─ auth/
+│     └─ spec.md              # 現行規格
+└─ changes/
+   └─ add-two-factor-auth/
+      ├─ proposal.md          # 為什麼、預計變更
+      ├─ tasks.md             # 實作待辦
+      ├─ design.md            # 技術筆記（選填）
+      └─ specs/
+         └─ auth/
+            └─ spec.md        # Delta：新增 MFA 條目</code></pre>
+            <div class="example-text">
+              <p>
+                每個變更都保留完整脈絡：<code>proposal.md</code> 說明緣由、<code>tasks.md</code> 描述實作清單、<code>specs/</code> 撰寫 delta
+                記錄新增、修改或移除的需求。
+              </p>
+              <p>
+                Delta 需使用 <code>## ADDED / MODIFIED / REMOVED / RENAMED Requirements</code> 標題，並確保每個需求至少有一個
+                <code>#### Scenario:</code> 區塊以 Given/When/Then 方式描述。
+              </p>
+              <p>
+                完成實作後執行 `openspec archive add-two-factor-auth`，讓核准的規格合併回 <code>openspec/specs/</code>，維持唯一真實來源。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="community">
+        <div class="container">
+          <h2>社群與更新 <span class="en-label">Community & Updates</span></h2>
+          <p class="section-lead">
+            OpenSpec 由 Fission AI 維護，加入社群與官方頻道可掌握版本更新與最佳實務。
+          </p>
+          <div class="community-grid">
+            <a class="community-card" href="https://discord.gg/YctCnvvshC" target="_blank" rel="noreferrer">
+              <h3>Discord 社群</h3>
+              <p>與其他使用者交換規格撰寫技巧、分享 AI 協作經驗。</p>
+            </a>
+            <a class="community-card" href="https://x.com/0xTab" target="_blank" rel="noreferrer">
+              <h3>X（@0xTab）</h3>
+              <p>追蹤產品更新、教學與成功案例。</p>
+            </a>
+            <a class="community-card" href="https://www.npmjs.com/package/@fission-ai/openspec" target="_blank" rel="noreferrer">
+              <h3>npm 套件頁</h3>
+              <p>查看版本歷史與安裝指令，保持工具為最新狀態。</p>
+            </a>
+            <a class="community-card" href="https://github.com/Fission-AI/OpenSpec" target="_blank" rel="noreferrer">
+              <h3>GitHub 原始碼</h3>
+              <p>瀏覽原始碼、提交 Issue 或貢獻新功能。</p>
+            </a>
+          </div>
+          <aside class="tip">
+            <strong>記得：</strong>每當有人切換到不同的 AI 工具，執行 <code>openspec update</code> 以刷新指引與 slash commands。
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="current-year"></span> VibeCodingOpenSpec - 依 MIT 授權條款發佈。</p>
+      </div>
+    </footer>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

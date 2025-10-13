@@ -49,5 +49,15 @@ Codex 會開始分析專案，並提示下一步。
 openspec validate add-one-page-overview --strict
 ```
 檢查後能修正一些文件問題  
+接著可以請 Codex 實作 task.md  
+可以輸入:  
+```bash
+開始實作
+```
+
+# 執行專案
+於瀏覽器開啟 `docs/index.html` 手動檢查 360px 與 1280px 寬度的排版與暗色模式呈現。
+
+![OpenSpec_OnePage](./images/OpenSpec_OnePage.png)
 
 
