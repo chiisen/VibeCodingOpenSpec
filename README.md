@@ -44,4 +44,10 @@ Codex 會開始分析專案，並提示下一步。
 ```bash
 幫我依據需求建立 proposal.md 與 tasks.md
 ```
+如果要求檢查:
+```bash
+openspec validate add-one-page-overview --strict
+```
+檢查後能修正一些文件問題  
+
 
