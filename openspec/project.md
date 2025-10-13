@@ -1,31 +1,31 @@
-# Project Context
+# 專案脈絡
 
-## Purpose
-[Describe your project's purpose and goals]
+## 目的
+[描述你的專案目的與目標]
 
-## Tech Stack
-- [List your primary technologies]
-- [e.g., TypeScript, React, Node.js]
+## 技術棧
+- [列出你主要使用的技術]
+- [例如：TypeScript、React、Node.js]
 
-## Project Conventions
+## 專案慣例
 
-### Code Style
-[Describe your code style preferences, formatting rules, and naming conventions]
+### 程式碼風格
+[描述你的程式碼風格偏好、格式化規則與命名慣例]
 
-### Architecture Patterns
-[Document your architectural decisions and patterns]
+### 架構模式
+[記錄你的架構決策與常用模式]
 
-### Testing Strategy
-[Explain your testing approach and requirements]
+### 測試策略
+[說明你的測試方法、範圍與需求（例如單元測試、整合測試、端對端測試）]
 
-### Git Workflow
-[Describe your branching strategy and commit conventions]
+### Git 工作流程
+[描述分支策略、合併規則與提交訊息慣例]
 
-## Domain Context
-[Add domain-specific knowledge that AI assistants need to understand]
+## 領域脈絡
+[補充 AI 助手需了解的領域專有知識，例如商業邏輯、重要術語或資料模型]
 
-## Important Constraints
-[List any technical, business, or regulatory constraints]
+## 重要限制
+- [列出任何技術性、商業性或法規上的限制]
 
-## External Dependencies
-[Document key external services, APIs, or systems]
+## 外部相依
+[記錄主要的外部服務、API 或系統]

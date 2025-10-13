@@ -67,3 +67,9 @@ Codex setup note
 Codex 設定說明
 Prompts installed to ~/.codex/prompts (or $CODEX_HOME/prompts).
 提示（Prompts）已安裝至 ~/.codex/prompts（或 $CODEX_HOME/prompts）。
+可以參考翻譯文件:  
+[openspec-apply](./prompts/openspec-apply.md)  
+[openspec-archive](./prompts/openspec-archive.md)  
+[openspec-proposal](./prompts/openspec-proposal.md)  
+
+
