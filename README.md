@@ -1,0 +1,2 @@
+# VibeCodingOpenSpec
+Vibe Coding OpenSpec
